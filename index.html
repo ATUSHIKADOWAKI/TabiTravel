@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabi Travel まだ見ぬ冒険へ、新たな発見を探しに</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+
+  <main class="main">
+    <header class="header">
+      <div class="header-logo">Tabi Travel</div>
+      <div class="login"><img src="img/Profile.png" alt="">ログイン</div>
+
+      <div class="homecontainer">
+        <div class="swiper-container slider1">
+          <div class="swiper-wrapper">
+              <!-- スライドたち -->
+              <div class="swiper-slide"><img src="img/fv1.jpg" alt="" class="fv-img"></div>
+              <div class="swiper-slide"><img src="img/fv2.jpg" alt="" class="fv-img"></div>
+              <div class="swiper-slide"><img src="img/fv3.jpg" alt="" class="fv-img"></div>
+              <div class="swiper-slide"><img src="img/fv4.jpg" alt="" class="fv-img"></div>
+          </div>
+          <!-- ページネーション(ページ移動)が必要な場合 -->
+      
+          <!-- 左右にナビゲーションボタンが必要な場合 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+            </div>
+        <h1 class="home-title">まだ見ぬ冒険へ、<br>新たな発見を探しに</h1>
+        <div class="tab-select">
+          <p id="tab-1" class="tab under-line">日本</p>
+          <p id="tab-2" class="tab">海外</p>
+        </div>
+
+        <div id="tab-1-selecter"class="selecter selected">
+          <form action="process.php" method="post">
+          <nav>
+            <ul>
+              <li class="a">宿泊先</li>
+              <li class="b">チェックイン</li>
+              <li class="c">チェックアウト</li>
+              <li class="d">人数</li>
+              <li class="e border"><select name="pref">
+                <option value="">選択してください</option>
+                <option value="北海道">北海道</option>
+                <option value="青森県">青森県</option>
+                <option value="岩手県">岩手県</option>
+                <option value="宮城県">宮城県</option>
+                <option value="秋田県">秋田県</option>
+                <option value="山形県">山形県</option>
+                <option value="福島県">福島県</option>
+                <option value="茨城県">茨城県</option>
+                <option value="栃木県">栃木県</option>
+                <option value="群馬県">群馬県</option>
+                <option value="埼玉県">埼玉県</option>
+                <option value="千葉県">千葉県</option>
+                <option value="東京都" selected>東京都</option>
+                <option value="神奈川県">神奈川県</option>
+                <option value="新潟県">新潟県</option>
+                <option value="富山県">富山県</option>
+                <option value="石川県">石川県</option>
+                <option value="福井県">福井県</option>
+                <option value="山梨県">山梨県</option>
+                <option value="長野県">長野県</option>
+                <option value="岐阜県">岐阜県</option>
+                <option value="静岡県">静岡県</option>
+                <option value="愛知県">愛知県</option>
+                <option value="三重県">三重県</option>
+                <option value="滋賀県">滋賀県</option>
+                <option value="京都府">京都府</option>
+                <option value="大阪府">大阪府</option>
+                <option value="兵庫県">兵庫県</option>
+                <option value="奈良県">奈良県</option>
+                <option value="和歌山県">和歌山県</option>
+                <option value="鳥取県">鳥取県</option>
+                <option value="島根県">島根県</option>
+                <option value="岡山県">岡山県</option>
+                <option value="広島県">広島県</option>
+                <option value="山口県">山口県</option>
+                <option value="徳島県">徳島県</option>
+                <option value="香川県">香川県</option>
+                <option value="愛媛県">愛媛県</option>
+                <option value="高知県">高知県</option>
+                <option value="福岡県">福岡県</option>
+                <option value="佐賀県">佐賀県</option>
+                <option value="長崎県">長崎県</option>
+                <option value="熊本県">熊本県</option>
+                <option value="大分県">大分県</option>
+                <option value="宮崎県">宮崎県</option>
+                <option value="鹿児島県">鹿児島県</option>
+                <option value="沖縄県">沖縄県</option>
+                </select></li>
+              <li class="f border"><input type="date" name="calendar" max="9999-12-31"></li>
+              <li class="greeting border"><input type="date" name="calendar" max="9999-12-31"></li>
+              <li class="h border"><select name="num">
+                <option value="">-</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 以上</option>
+                </select></li>
+                <li class="i"><input type="image" name="submit"  src="img/Search.png"></li>
+            </ul>
+          </nav>
+        </form>
+        </div>
+        </div>
+
+        <div id="tab-2-selecter" class="selecter">
+          <form action="process.php" method="post">
+            <nav>
+              <ul>
+                <li class="a">出発地</li>
+                <li class="b">目的地</li>
+                <li class="c">出発日</li>
+                <li class="d">人数</li>
+                <li class="e border"><select name="departure">
+                  <option value="">選択してください</option>
+                  <option value="東京（NRT＋HND）"selected>東京（NRT＋HND）</option>
+                  <option value="成田(NRT)">成田(NRT)</option>
+                  <option value="羽田(HND)">羽田(HND)</option>
+                  <option value="大阪（関空＋伊丹）">大阪（関空＋伊丹）</option>
+                  <option value="伊丹">伊丹</option>
+                  <option value="名古屋（中部）">名古屋（中部）</option>
+                  <option value="中部（セントレア）">中部（セントレア）</option>
+                  <option value="名古屋駅">名古屋駅</option>
+                  <option value="福岡">福岡</option>
+                  <option value="博多港">博多港</option>
+                  <option value="札幌">札幌</option>
+                  <option value="旭川">旭川</option>
+                  <option value="奄美大島" >奄美大島</option>
+                  </select></li>
+                <li class="f border"><select name="arrival">
+                  <option value="">エリアを指定</option>
+                  <option value="ハワイ">ハワイ</option>
+                  <option value="グアム・サイパン">グアム・サイパン</option>
+                  <option value="アジア">アジア</option>
+                  <option value="アメリカ・カナダ・メキシコ">アメリカ・カナダ・メキシコ</option>
+                  <option value="ヨーロッパ・アメリカ">ヨーロッパ・アメリカ</option>
+                  <option value="オセアニア">オセアニア</option>
+                  <option value="中国">中国</option>
+                  </select></li>
+                <li class="g border"><input type="date" name="calendar" max="9999-12-31"></li>
+                <li class="h border"><select name="num">
+                  <option value="">-</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10 以上</option>
+                  </select></li>
+                  <li class="i"><input type="image" name="submit"  src="img/Search.png"></li>
+              </ul>
+            </nav>
+          </form>
+        </div>
+        
+        <div>
+          <form action="process.php" method="post" class="sp-selecter">
+            <input type="image" name="submit"  src="img/Search.png">
+            <input type="text" name="text" placeholder="行先を決める">
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="greeting">
+      <p class="section-title">Tabi Travelは あなたにピッタリの旅をご提案いたします。</p>
+      <div class="greeting-content">
+      <div class="greeting-item">
+        <img src="img/Icon awesome-plane.png" alt="">
+        <p class="bold">世界一のプラン数</p>
+        <p class="dark">全国の旅先、計4,4000件以上のプランより
+          お選びいただけます。
+          </p>
+      </div>
+      <div class="greeting-item">
+        <img src="img/Icon awesome-tools.png" alt="">
+        <p class="bold">豊富なオプション</p>
+        <p class="dark">お客様一人一人に合わせた、
+          柔軟なオプションが可能です。</p>
+        </div>
+        <div class="greeting-item">
+          <img src="img/Icon awesome-smile-wink.png" alt="">
+          <p class="bold">より簡単、シンプルに</p>
+          <p class="dark">面倒な手間を省き、良い旅のスタートをお届け
+            致します。</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="recommend">
+      <div class="recommend-container">
+        <p class="section-title left">あなたへのオススメ</p>
+        <p>期間限定キャンペーン</p>
+        <div class="swiper-container slider2">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                <img src="img/main1.jpg" alt="">
+              </a>
+                <p class="item-title">湖とコテージ</p>
+                <p class="item-title gray">神奈川県 芦ノ湖<span class="star">★★★★★</span></p>
+                <p class="red-text">￥8,700 〜</p>
+                <p class="red-text">キャンプセット貸し出し有り</p>
+                <p class="gray-bottom">ポイント２倍キャンペーン 1/1 ~ 2/1 </p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/main2.jpg" alt="">
+                </a>
+                 <p class="item-title">小さなログハウスで静かなひと時</p>
+                <p class="item-title gray">山梨県 富士吉田<span class="star">★★★★</span></p>
+                <p class="red-text">￥6,400 〜</p>
+                <p class="red-text">ペット可、キッチン等完備</p>
+                <p class="gray-bottom">ポイント２倍キャンペーン 1/1 ~ 2/1 </p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/main3.jpg" alt="">
+                </a>
+                 <p class="item-title">鉄板焼き、食べ歩きツアー</p>
+                <p class="item-title gray">大阪、京都<span class="star">★★★★</span></p>
+                <p class="red-text">￥5,500 〜</p>
+                <p class="red-text">リーズナブルな定番ツアー</p>
+                <p class="gray-bottom">現地で使える、お得なクーポンプレゼント</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/fv2.jpg" alt="">
+                </a>
+                 <p class="item-title">絶景に癒される</p>
+                <p class="item-title gray">岩手県 岩手郡 <span class="star">★★★★★</span></p>
+                <p class="red-text">￥1,2600 〜</p>
+                <p class="red-text">キャンプセット貸し出し有り</p>
+                <p class="gray-bottom">次回利用可能、50%割引クーポン付与 </p>
+              </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
+      </div>
+    </section>
+
+    <section class="recommend-2">
+      <div class="recommend-container">
+        <p class="section-title left">日本を感じる</p>
+        <p>日本を知った気になっていませんか？</p>
+        <div class="swiper-container slider3">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/fv4.jpg" alt="">
+                </a>
+                <p class="item-title">寿司寿司寿司寿司!!!!</p>
+                <p class="item-title gray">神奈川県 芦ノ湖</p>
+                <p class="star">★★★★★</p>
+                <p class="red-text">￥13,000 〜</p>
+                <p class="red-text">新鮮な海の幸,満喫ツアー</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/sub2.jpg" alt="">
+                </a>
+                 <p class="item-title">お寺巡り</p>
+                <p class="item-title gray">熊本県 熊本</p>
+                <p class="star">★★★★★</p>
+                <p class="red-text">￥6,400 〜</p>
+                <p class="red-text">浴衣レンタル可</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/sub3.jpg" alt="">
+                </a>
+                 <p class="item-title">日本三景の一つ「厳島神社</p>
+                <p class="item-title gray">広島県廿日市市</p>
+                <p class="star">★★★★★</p>
+                <p class="red-text">￥10,200 〜</p>
+                <p class="red-text">広島絶品グルメツアー</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/sub4.jpg" alt="">
+                </a>
+                 <p class="item-title">伝統的建造物を巡る</p>
+                <p class="item-title gray">京都府 京都</p>
+                <p class="star">★★★★★</p>
+                <p class="red-text">￥8,200 〜</p>
+                <p class="red-text">定番ツアー</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/fv3.jpg" alt="">
+                </a>
+                 <p class="item-title ">緑豊かな竹林に囲まれる</p><p class="item-title gray">滋賀県 近江八幡 
+                  </p>
+                  <p class="star">★★★★★</p>
+                <p class="red-text">￥9,200 〜</p>
+                <p class="red-text">伝統陶芸体験 オプションあり</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/main3.jpg" alt="">
+                </a>
+                <p class="item-title">寿司寿司寿司寿司!!!!</p>
+                <p class="item-title gray">神奈川県 芦ノ湖</p>
+                <p class="star">★★★★★</p>
+                <p class="red-text">￥13,000 〜</p>
+                <p class="red-text">新鮮な海の幸,満喫ツアー</p>
+              </div>
+              <div class="swiper-slide recommend-items">
+                <a href="#">
+                  <img src="img/sub2.jpg" alt="">
+                </a>
+                 <p class="item-title">お寺巡り</p>
+                <p class="item-title gray">熊本県 熊本</p>
+                <p class="star">★★★★★</p>
+                <p class="red-text">￥6,400 〜</p>
+                <p class="red-text">浴衣レンタル可</p>
+              </div>
+          </div>
+          <!-- 左右にナビゲーションボタンが必要な場合 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <ul>
+      <li><a href="#">会社情報</a> </li>
+      <li><a href="#">よくある質問</a></li>
+      <li><a href="#">ご利用案内</a></li>
+      <li><a href="#">求人案内</a></li>
+      <li><a href="#">サイトマップ</a></li>
+      <li><a href="#">システムメンテナンス</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">標識・約款</a></li>
+    </ul>
+    <p>Copyright © 2021 Tabi Travel, Inc. All Rights Reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
